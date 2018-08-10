@@ -10,7 +10,7 @@ $ helm install stable/orangehrm
 
 ## Introduction
 
-This chart bootstraps a [OrangeHRM](https://github.com/bitnami/bitnami-docker-orangehrm) deployment on a [Kubernetes](http://kubernetes.io) cluster using the [Helm](https://helm.sh) package manager.
+This chart bootstraps an [OrangeHRM](https://github.com/bitnami/bitnami-docker-orangehrm) deployment on a [Kubernetes](http://kubernetes.io) cluster using the [Helm](https://helm.sh) package manager.
 
 It also packages the [Bitnami MariaDB chart](https://github.com/kubernetes/charts/tree/master/stable/mariadb) which is required for bootstrapping a MariaDB deployment for the database requirements of the OrangeHRM application.
 
@@ -73,12 +73,12 @@ The following table lists the configurable parameters of the OrangeHRM chart and
 | `externalDatabase.port`              | Port of the external database            | `3306`                                                  |
 | `externalDatabase.user`              | Existing username in the external db     | `bn_orangehrm`                                          |
 | `externalDatabase.password`          | Password for the above username          | `nil`                                                   |
-| `externalDatabase.database`          | Name of the existing databse             | `bitnami_orangehrm`                                     |
-| `mariadb.enabled`                    | Wheter to use or not the mariadb chart   | `true`                                                  |
-| `mariadb.mariadbDatabase`            | Database name to create                  | `bitnami_orangehrm`                                     |
-| `mariadb.mariadbUser`                | Database user to create                  | `bn_orangehrm`                                          |
-| `mariadb.mariadbPassword`            | Password for the database                | `nil`                                                   |
-| `mariadb.mariadbRootPassword`        | MariaDB admin password                   | `nil`                                                   |
+| `externalDatabase.database`          | Name of the existing database            | `bitnami_orangehrm`                                     |
+| `mariadb.enabled`                    | Whether to use the MariaDB chart         | `true`                                                  |
+| `mariadb.db.name`            | Database name to create                  | `bitnami_orangehrm`                                     |
+| `mariadb.db.user`                | Database user to create                  | `bn_orangehrm`                                          |
+| `mariadb.db.password`            | Password for the database                | `nil`                                                   |
+| `mariadb.rootUser.password`        | MariaDB admin password                   | `nil`                                                   |
 | `mariadb.persistence.enabled`        | Enable MariaDB persistence using PVC     | `true`                                                  |
 | `mariadb.persistence.storageClass`   | PVC Storage Class for MariaDB volume     | `nil` (uses alpha storage class annotation)             |
 | `mariadb.persistence.accessMode`     | PVC Access Mode for MariaDB volume       | `ReadWriteOnce`                                         |
