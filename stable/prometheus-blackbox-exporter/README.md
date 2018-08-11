@@ -43,6 +43,7 @@ The following table lists the configurable parameters of the Blackbox-Exporter c
 
 |               Parameter                |                   Description                   |            Default            |
 | -------------------------------------- | ----------------------------------------------- | ----------------------------- |
+| `affinity`                             | affinity for pod assignment                     | `{}`                          |
 | `config`                               | Prometheus blackbox configuration               | {}                            |
 | `configmapReload.name`                 | configmap-reload container name                 | `configmap-reload`            |
 | `configmapReload.image.repository`     | configmap-reload container image repository     | `jimmidyson/configmap-reload` |
@@ -66,6 +67,7 @@ The following table lists the configurable parameters of the Blackbox-Exporter c
 | `service.type`                         | type of service to create                       | `ClusterIP`                   |
 | `service.port`                         | port for the blackbox http service              | `9115`                        |
 | `service.externalIPs`                  | list of external ips                            | []                            |
+| `tolerations`                          | taint tolerations for pod assignment            | `[]`                          |
 
 Specify each parameter using the `--set key=value[,key=value]` argument to `helm install`. For example,
 

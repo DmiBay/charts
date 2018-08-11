@@ -7,6 +7,14 @@ image:
 
 nodeSelector: {}
 
+tolerations: []
+  # - key: "key"
+  #   operator: "Equal|Exists"
+  #   value: "value"
+  #   effect: "NoSchedule|PreferNoSchedule|NoExecute(1.6 only)"
+
+affinity: {}
+
 config:
   modules:
     http_2xx:
